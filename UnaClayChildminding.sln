@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnaClayChildminding", "src\WebApplication8\UnaClayChildminding.xproj", "{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnaClayChildminding", "src\UnaClayChildminding\UnaClayChildminding.xproj", "{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

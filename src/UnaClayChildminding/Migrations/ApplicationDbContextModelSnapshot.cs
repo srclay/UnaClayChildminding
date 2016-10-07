@@ -11,10 +11,9 @@ using UnaClayChildminding.Models;
 namespace UnaClayChildminding.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("00000000000000_CreateIdentitySchema")]
-    partial class CreateIdentitySchema
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-beta8")
@@ -99,7 +98,7 @@ namespace UnaClayChildminding.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUserRoles");
                 });
 
-            modelBuilder.Entity("WebApplication8.Models.ApplicationUser", b =>
+            modelBuilder.Entity("UnaClayChildminding.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -156,14 +155,14 @@ namespace UnaClayChildminding.Migrations
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("WebApplication8.Models.ApplicationUser")
+                    b.HasOne("UnaClayChildminding.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("WebApplication8.Models.ApplicationUser")
+                    b.HasOne("UnaClayChildminding.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
@@ -174,7 +173,7 @@ namespace UnaClayChildminding.Migrations
                         .WithMany()
                         .HasForeignKey("RoleId");
 
-                    b.HasOne("WebApplication8.Models.ApplicationUser")
+                    b.HasOne("UnaClayChildminding.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });

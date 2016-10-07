@@ -1,0 +1,49 @@
+﻿@model IEnumerable<UnaClayChildminding.Models.Testimonial>
+
+
+<div class="container-fluid">
+    <div class="jumbotron" style="background: rgba(0,0,0,0)">
+        <div class="container-fluid">
+            <row>
+
+                <div class="col-sm-9 col-md-9 h4 text-center">
+                    Welcome to Little Smiles Childcare <br />Childcare services in Bracknell, Berkshire<br /><br />
+                    <div class="h5">
+                        <span class="glyphicon glyphicon-phone-alt"></span> 01344 485609<br />
+                        <span class="glyphicon glyphicon-phone"></span> 07958 426366<br />
+                        <a class="glyphicon glyphicon-envelope" href="mailto:lisa@littlesmileschildcare.co.uk"> lisa@littlesmileschildcare.co.uk</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <img class="center-block" src="~/images/littlesmileslogo.png" width="216" height="130" />
+                </div>
+            </row>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-sm-4 col-md-4 hidden-xs hidden-sm">
+            <img src="~/images/littlesmiles.gif" width="216" height="255" align="bottom" />
+        </div>
+        <div class="col-sm-12 col-md-8">
+            <h3>Testimonials</h3>
+
+            @*@foreach (var item in Model)
+    {
+        <div class="panel panel-default panel-body">
+            @Html.DisplayFor(modelItem => item.Description)
+        </div>
+    }*@
+            <div class="panel panel-default panel-body">
+                    Ms M XXX from Harmans Water remarks “We enjoy reading what our daughter has been upto in the daily contact book. We are very happy with all the outdoor activities and XXX seems happy.”
+                </div>
+                <div class="panel panel-default panel-body">
+                    Ms P XXX from Harmans Water comments “We have been very happy. The daily contact diary is very detailed. The activities our son does seem very varied. The meals are excellent. XXX has been very happy when being dropped off so we don’t worry about him. We have been very impressed with your level of childcare and efficiency.”
+                </div>
+                <div class="panel panel-default panel-body">
+                    Ms M XXX from Harmans Water states
+                    "I would like to take this opportunity to thank you for all the fantastic care and support you have given to XXX over the last year. I can honestly say we will be very hard pushed to find the same standard of care and development for XXX in Wales, as we relocate with the family. Many thanks."
+                </div>
+
+        </div>
+    </div>
+</div>

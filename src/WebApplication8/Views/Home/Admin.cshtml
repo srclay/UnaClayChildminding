@@ -1,0 +1,32 @@
+﻿@model Admin
+
+<div class="container-fluid">
+    <div class="jumbotron" style="background: rgba(0,0,0,0)">
+        <div class="container-fluid">
+            <row>
+                <div class="col-sm-3 col-md-3 col-sm-push-9">
+                    <img class="center-block" src="~/images/littlesmileslogo.png" width="216" height="130" />
+                </div>
+                <div class="col-sm-9 col-md-9 h4 text-center col-sm-pull-3">
+                    Welcome to Little Smiles Childcare <br />Childcare services in Bracknell, Berkshire<br /><br />
+                    <div class="h5">
+                        <span class="glyphicon glyphicon-phone-alt"></span> 01344 485609<br />
+                        <span class="glyphicon glyphicon-phone"></span> 07958 426366<br />
+                        <a class="glyphicon glyphicon-envelope" href="mailto:lisa@littlesmileschildcare.co.uk"> lisa@littlesmileschildcare.co.uk</a>
+                    </div>
+                </div>
+
+            </row>
+        </div>
+    </div>
+
+    <form asp-controller="Home" asp-action="Admin" method="post">
+        <div class="form-group">
+            <label for="Availability">Availability</label>
+            <input asp-for="Availability" class="form-control" id="Availability" />
+        </div>
+        <button class="btn btn-default" type="submit">Submit</button>
+
+    </form>
+</div>
+

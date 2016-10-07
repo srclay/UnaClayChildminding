@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{53E4744D-BF2B-4E0C-A8C3-6B6293218C6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A7545BE-0E49-455F-BA1C-30FA7C570548}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnaClayChildminding", "src\WebApplication8\UnaClayChildminding.xproj", "{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB18C19-56AD-47C1-8BDF-B0810C083AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9DB18C19-56AD-47C1-8BDF-B0810C083AAA} = {53E4744D-BF2B-4E0C-A8C3-6B6293218C6A}
+	EndGlobalSection
+EndGlobal

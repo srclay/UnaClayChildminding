@@ -1,0 +1,68 @@
+
+body {  font-family:Verdana, sans-serif; margin: 0px;
+	padding: 0px; border:0; line-height: 1.5em; font-size: 100.1%; 
+    background-image: url("/images/hands2.jpg");
+    background-position: left ;
+    background-repeat: repeat;
+    background-position: top;
+    background-color:  #fff;
+    background-size: auto;
+}
+
+#wrapper {
+	text-align: left;
+	margin: 0px auto;
+	padding: 0px;
+	border:0;
+	
+}
+
+
+#header {
+	margin: 0 0 0 0;
+	background: #f8b0ef;
+}
+
+#side-a { margin-top: 0px; padding: 10px;
+	float: left;
+	font-size: 1.2em;
+}
+
+#side-b { margin-top: 0px; padding: 0 10px 0 10px;
+	float: left;
+	font-size: 1.2em;
+}
+
+#footer {
+	clear: both;
+	background: #A2A2A2; min-height: 88px;
+	background: url("footer.gif") no-repeat bottom;
+}
+
+.foottext { font-size: 80%;
+	padding-top:64px; padding-left:190px;
+	margin-bottom:2px;
+	text-align: center;	font-weight:normal;
+}
+.menu   {margin-top:0px;}
+.availability {	margin-top:0px; line-height: 1.4em; margin-right: 66px;}
+
+h1, h2, h3 , h4, p {  margin-left: 10px;
+}
+
+h1, h2, h3 , h4 {font-weight: bold; }
+
+h1{
+	color: #874255;
+		font-size: 190%; margin-top: 111px; 
+}
+h2{
+		font-size: 110%; margin-top: 0px;
+}
+h3{
+		font-size: 170%;	color:#874255; margin-top: 0px;
+}
+a {	text-align:left;
+	text-decoration: none;
+	font-weight: bold; color: blue;
+}

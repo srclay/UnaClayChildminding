@@ -3,9 +3,7 @@
 <div class="container-fluid">
     @Html.Partial("_header")
     <div class="container-fluid">
-        <div class="col-sm-4 col-md-4 hidden-sm hidden-xs">
-            <img src="~/images/happy-kid-clipart-Chidren.png" width="216" height="216" align="bottom" />
-        </div>
+        @Html.Partial("_LeftPic")
         <div class="col-sm-8 col-md-8">
             <h3>Una Clay</h3>
             <p>
@@ -27,11 +25,8 @@
     </div>
 
 
-    <div class="row">
-        <div class="container-fluid">
-
+    <div class="container-fluid">
             <div class="col-sm-8 col-md-8">
-
                 <p>
                     We have a lovely secure garden with a vegetable patch, playhouse, sand/
                     water pit and ride on toys to encourage children to have fun and learn
@@ -63,12 +58,8 @@
                     Forest Park, The Warren, Easthampstead, Birch Hill, Great Hollands and
                     Ascot, in the Bracknell Forest area, in Berkshire.
                 </p>
-                <div class="col-sm-4 col-md-4 hidden-sm hidden-xs">
-                    <img src="~/images/inverse2.gif" width="262" height="295" align="right" />
-                </div>
-
             </div>
-        </div>
+        @Html.Partial("_RightPic")
     </div>
 </div>
 

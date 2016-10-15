@@ -9,7 +9,7 @@ namespace UnaClayChildminding.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Home()
         {
             return View();
         }

@@ -18,6 +18,7 @@
     "web": {
       "commandName": "web",
       "environmentVariables": {
+        "DNX_IIS_RUNTIME_FRAMEWORK": "dnx46",
         "Hosting:Environment": "Development"
       }
     }

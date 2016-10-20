@@ -1,0 +1,10 @@
+body {
+    font-family:'Comic Sans MS';
+    background-image: url("/images/hands2.jpg");
+    background-repeat: repeat;
+}
+
+a:link {
+    font-family:'Comic Sans MS';
+}
+

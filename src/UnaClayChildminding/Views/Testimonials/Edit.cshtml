@@ -1,0 +1,47 @@
+@model UnaClayChildminding.Models.Testimonial
+
+@{
+    ViewData["Title"] = "Edit Testimonial";
+}
+
+<div class="container-fluid">
+    @Html.Partial("_header")
+    <div class="container-fluid">
+        @Html.Partial("_LeftPic")
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <h3>Edit Testimonial</h3>
+
+            <form asp-action="Edit">
+                <div class="form-horizontal">
+                    <h4>Testimonial</h4>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ID" />
+                    <div class="form-group">
+                        <label asp-for="Description" class="col-md-2 control-label"></label>
+                        <div class="col-md-10">
+                            <input asp-for="Description" class="form-control" />
+                            <span asp-validation-for="Description" class="text-danger" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div>
+                <a asp-action="ViewTestimonials">Back to List</a>
+            </div>
+
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }
+
+        </div>
+    </div>
+</div>
+
+

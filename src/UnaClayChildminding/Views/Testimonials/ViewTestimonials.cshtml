@@ -1,4 +1,5 @@
 @model IEnumerable<UnaClayChildminding.Models.Testimonial>
+@inject SignInManager<ApplicationUser> SignInManager
 
 <div class="container-fluid">
     @Html.Partial("_header")
@@ -6,18 +7,32 @@
         @Html.Partial("_LeftPic")
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <h3>Testimonials</h3>
-
-            @*<p>
-                    <a asp-action="Create">Create New</a>
-                </p>*@
-
-            @foreach (var item in Model)
+            @if (SignInManager.IsSignedIn(User))
             {
-                <div class="panel panel-default panel-body">
-                    @Html.Raw(item.Description.Replace("\r\n", "<br />"))
-                    @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
-                </div>                            }
+                <p>
+                    <a asp-action="Create">Create New</a>
+                </p>
+            }
+
+            <table class="table">
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="panel panel-default panel-body">
+                            <td>
+                                @Html.Raw(item.Description.Replace("\r\n", "<br />"))
+                            </td>
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                                </td>
+                            }
+                        </tr>
+                        <tr class="spacer"><td></td></tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-</div>

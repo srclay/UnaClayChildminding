@@ -1,0 +1,23 @@
+@model IEnumerable<UnaClayChildminding.Models.Testimonial>
+
+<div class="container-fluid">
+    @Html.Partial("_header")
+    <div class="container-fluid">
+        @Html.Partial("_LeftPic")
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <h3>Testimonials</h3>
+
+            @*<p>
+                    <a asp-action="Create">Create New</a>
+                </p>*@
+
+            @foreach (var item in Model)
+            {
+                <div class="panel panel-default panel-body">
+                    @Html.Raw(item.Description.Replace("\r\n", "<br />"))
+                    @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+                </div>                            }
+        </div>
+    </div>
+</div>

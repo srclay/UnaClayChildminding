@@ -17,6 +17,7 @@ namespace UnaClayChildminding
 {
     public class Startup
     {
+        private string conString = "DefaultConnection";
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -28,6 +29,7 @@ namespace UnaClayChildminding
             {
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
                 builder.AddUserSecrets();
+                conString = "DevConnection";
             }
 
             builder.AddEnvironmentVariables();
@@ -39,9 +41,11 @@ namespace UnaClayChildminding
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               
+
+                // Add framework services.
+                services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString(conString)));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -52,9 +56,8 @@ namespace UnaClayChildminding
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-
             services.AddDbContext<ChildmindingContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString(conString)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

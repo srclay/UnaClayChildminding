@@ -11100,6 +11100,7 @@
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Tools >= 1.0.0-preview2-final",
       "Microsoft.VisualStudio.Web.CodeGenerators.Mvc >= 1.0.0-preview2-final",
+      "System.IO.FileSystem >= 4.0.1",
       "bootstrap >= 4.0.0-alpha5"
     ],
     ".NETCoreApp,Version=v1.0": []

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using UnaClayChildminding.Data;
 using System.Threading.Tasks;
 using UnaClayChildminding.Models;
+using System.IO;
 
 namespace UnaClayChildminding.Data
 {
@@ -32,6 +33,7 @@ namespace UnaClayChildminding.Data
                 context.Testimonials.Add(t);
             }
             context.SaveChanges();
+
         }
     }
 }

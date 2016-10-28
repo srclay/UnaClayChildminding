@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UnaClayChildminding.Models;
-using UnaClayChildminding.models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
@@ -41,16 +40,6 @@ namespace UnaClayChildminding.Controllers
         {
             return View();
             //return View(db.Testimonials.ToList());
-        }
-
-        public IActionResult Gallery()
-        {
-            var model = new Gallery()
-            {
-                Images = Directory.EnumerateFiles(_env.WebRootPath + "/images/uploads")
-                          .Select(fn => "/images/uploads/" + Path.GetFileName(fn))
-            };
-            return View(model);
         }
 
         [HttpGet]

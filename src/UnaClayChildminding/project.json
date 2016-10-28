@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-UnaClayChildminding-5716bf5a-6311-4856-9ae9-b423ba158feb",
 
   "dependencies": {
@@ -44,7 +44,8 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "bootstrap": "4.0.0-alpha5"
+    "bootstrap": "4.0.0-alpha5",
+    "System.IO.FileSystem": "4.0.1"
   },
 
   "tools": {

@@ -15,10 +15,12 @@ namespace UnaClayChildminding.Data
         }
 
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Testimonial>().ToTable("Testimonials");
+            modelBuilder.Entity<Image>().ToTable("Images");
         }
         
     }

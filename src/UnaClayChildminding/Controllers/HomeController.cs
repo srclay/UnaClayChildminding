@@ -4,11 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UnaClayChildminding.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace UnaClayChildminding.Controllers
 {
     public class HomeController : Controller
     {
+
+        private IHostingEnvironment _env;
+
+        public HomeController(IHostingEnvironment env)
+        {
+            _env = env;
+        }
+
         public IActionResult Home()
         {
             return View();
@@ -31,6 +41,7 @@ namespace UnaClayChildminding.Controllers
             return View();
             //return View(db.Testimonials.ToList());
         }
+
         [HttpGet]
         public IActionResult Admin()
         {

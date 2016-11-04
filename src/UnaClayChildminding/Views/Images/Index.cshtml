@@ -1,7 +1,18 @@
 @model IEnumerable<UnaClayChildminding.Models.Image>
+@inject SignInManager<ApplicationUser> SignInManager
 
 <div class="container-fluid">
     @Html.Partial("_header")
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <form name="upload" method="post" asp-action="Index" asp-controller="Images" enctype="multipart/form-data">
+            <input type="file" name="files" multiple id="selectedFile" onchange="document.getElementById('submit').click();" style="display: none;" />
+            <input type="submit" id="submit" value="Upload" style="display: none;" />
+            <button type="button" class="btn btn-default btn-lg" onclick="document.getElementById('selectedFile').click();">
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+            </button>
+        </form>
+    }
     <div id="main_area">
         <!-- Slider -->
         <div class="row">

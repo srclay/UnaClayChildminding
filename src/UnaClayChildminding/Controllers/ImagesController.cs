@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using UnaClayChildminding.Data;
 using UnaClayChildminding.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace UnaClayChildminding.Controllers
 {
     public class ImagesController : Controller
     {
         private readonly ChildmindingContext _context;
+        private IHostingEnvironment _environment;
 
-        public ImagesController(ChildmindingContext context)
+        public ImagesController(ChildmindingContext context, IHostingEnvironment environment)
         {
-            _context = context;    
+            _context = context;
+            _environment = environment;
         }
 
         // GET: Images
@@ -25,6 +30,26 @@ namespace UnaClayChildminding.Controllers
             return View(await _context.Images.ToListAsync());
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Index(ICollection<IFormFile> files)
+        {
+            var uploads = Path.Combine(_environment.WebRootPath, "images\\uploads");
+            foreach (var file in files)
+            {
+                if (file.Length > 0)
+                {
+                    var image = new Image();
+                    image.fileName = System.IO.Path.GetFileName(file.FileName);
+                    using (var fileStream = new FileStream(Path.Combine(uploads, image.fileName), FileMode.Create))
+                    {
+                        await file.CopyToAsync(fileStream);
+                        _context.Add(image);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+            }
+            return View(await _context.Images.ToListAsync());
+        }
         // GET: Images/Details/5
         public async Task<IActionResult> Details(int? id)
         {

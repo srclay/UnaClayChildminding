@@ -40,20 +40,18 @@
                     <li><a asp-controller="Home" asp-action="Services"><img src="~/images/child3.png" width="27" height="39" style="margin:0px 5px" />Childcare Services</a></li>
                     <li><a asp-controller="Testimonials" asp-action="ViewTestimonials"><img src="~/images/child4.png" width="27" height="39" style="margin:0px 5px" />Testimonials</a></li>
                     <li><a asp-controller="Images" asp-action="Index"><img src="~/images/Child6.png" width="27" height="39" style="margin:0px 5px" />Gallery</a></li>
-                    @*<li><a asp-controller="Home" asp-action="Parents">Parent Login</a></li>*@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @await Html.PartialAsync("_LoginPartial")
-                    @*<li><a asp-controller="Home" asp-action="Admin"><img src="~/images/child5.png" width="27" height="39" style="margin:0px 5px" />Admin</a></li>*@
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             @RenderBody()
-            <div class="navbar navbar-fixed-bottom text-right">
+            <footer>
                 &copy; 2016 - <a href="mailto:stephen.clay@hotmail.com">Stephen Clay</a>
-            </div>
+            </footer>
         </div>
 
         <environment names="Development">

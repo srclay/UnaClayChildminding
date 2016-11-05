@@ -18,6 +18,56 @@ a:link {
     padding: 0;
 }
 
+.img-thumbnail-rotated {
+    transform: rotate(-20deg);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#thumbnail-rotated {
+     width: 80%;
+     height: 80%;
+}
+
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: 100%;
 }
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.navbar-inverse {
+    background-color: rgba(204, 49, 49, 0.22);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: black
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #70b0f9;
+}
+
